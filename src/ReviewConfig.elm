@@ -45,6 +45,5 @@ config =
     , NoUnused.Variables.rule
     , NoUnused.CustomTypeConstructors.rule []
     , NoRedundantConcat.rule
-    , NoExposingEverything.rule
     ]
-        |> List.map (ignoreErrorsForDirectories [ "src/BRMS/I18n" ])
+        |> List.map (ignoreErrorsForDirectories [ "src/Api/Paack/Graphql" ])
