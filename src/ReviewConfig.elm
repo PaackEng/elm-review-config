@@ -45,7 +45,6 @@ config =
     , NoUnused.Variables.rule
     , NoUnused.CustomTypeConstructors.rule []
     , NoRedundantConcat.rule
-    , ignoreErrorsForFiles [ "showcase/src/Main.elm" ] NoUnused.Exports.rule
     , NoExposingEverything.rule
     ]
         |> List.map (ignoreErrorsForDirectories [ "src/I18n" ])
