@@ -47,4 +47,4 @@ config =
     , NoRedundantConcat.rule
     , NoExposingEverything.rule
     ]
-        |> List.map (ignoreErrorsForDirectories [ "src/I18n" ])
+        |> List.map (ignoreErrorsForDirectories [ "src/BRMS/I18n" ])
