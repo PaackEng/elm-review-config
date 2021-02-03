@@ -19,6 +19,7 @@ import NoRedundantCons
 import NoUnused.CustomTypeConstructors
 import NoUnused.Dependencies
 import NoUnused.Exports
+import NoUnused.Modules
 import NoUnused.Parameters
 import NoUnused.Patterns
 import NoUnused.Variables
@@ -44,6 +45,7 @@ config =
     , NoUnused.Patterns.rule
     , NoUnused.Variables.rule
     , NoUnused.CustomTypeConstructors.rule []
+    , NoUnused.Modules.rule
     , NoRedundantConcat.rule
     ]
         |> List.map (ignoreErrorsForDirectories [ "src/Api/Paack/Graphql" ])
