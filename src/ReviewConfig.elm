@@ -48,4 +48,4 @@ config =
     , NoUnused.Modules.rule
     , NoRedundantConcat.rule
     ]
-        |> List.map (ignoreErrorsForDirectories [ "src/Api/Paack/Graphql" ])
+        |> List.map (ignoreErrorsForDirectories [ "src/Api/Paack/Graphql", "src/Schemas" ])
