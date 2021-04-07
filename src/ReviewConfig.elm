@@ -23,12 +23,7 @@ import NoUnused.Modules
 import NoUnused.Parameters
 import NoUnused.Patterns
 import NoUnused.Variables
-import Review.Rule
-    exposing
-        ( Rule
-        , ignoreErrorsForDirectories
-        , ignoreErrorsForFiles
-        )
+import Review.Rule exposing (Rule)
 
 
 {-| List of rules used with elm-review
@@ -48,4 +43,3 @@ config =
     , NoUnused.Modules.rule
     , NoRedundantConcat.rule
     ]
-        |> List.map (ignoreErrorsForDirectories [ "src/Api/Paack/Graphql", "src/Schemas", "src/I18n", "../src" ])
