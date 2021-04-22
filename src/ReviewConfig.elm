@@ -23,7 +23,7 @@ import NoUnused.Modules
 import NoUnused.Parameters
 import NoUnused.Patterns
 import NoUnused.Variables
-import Review.Rule exposing (Rule)
+import Review.Rule exposing (Rule, ignoreErrorsForDirectories)
 
 
 {-| List of rules used with elm-review
