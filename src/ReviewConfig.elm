@@ -40,6 +40,13 @@ config =
     , NoUnused.Patterns.rule
     , NoUnused.Variables.rule
     , NoUnused.CustomTypeConstructors.rule []
-    , NoUnused.Modules.rule
+    , ignoreErrorsForDirectories
+        [ frontendKitDirectory ]
+        NoUnused.Modules.rule
     , NoRedundantConcat.rule
     ]
+
+
+frontendKitDirectory : String
+frontendKitDirectory =
+    "frontend-elm-kit"
