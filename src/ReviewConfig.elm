@@ -23,7 +23,7 @@ import NoUnused.Modules
 import NoUnused.Parameters
 import NoUnused.Patterns
 import NoUnused.Variables
-import Review.Rule exposing (Rule)
+import Review.Rule exposing (Rule, ignoreErrorsForDirectories)
 
 
 {-| List of rules used with elm-review
@@ -40,6 +40,13 @@ config =
     , NoUnused.Patterns.rule
     , NoUnused.Variables.rule
     , NoUnused.CustomTypeConstructors.rule []
-    , NoUnused.Modules.rule
+    , ignoreErrorsForDirectories
+        [ frontendKitDirectory ]
+        NoUnused.Modules.rule
     , NoRedundantConcat.rule
     ]
+
+
+frontendKitDirectory : String
+frontendKitDirectory =
+    "frontend-elm-kit"
