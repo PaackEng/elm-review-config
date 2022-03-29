@@ -12,8 +12,11 @@ module ReviewConfig exposing (config)
 import NoBooleanCase
 import NoDebug.Log
 import NoDebug.TodoOrToString
+import NoDeprecated
 import NoExposingEverything
+import NoInvalidRGBValues
 import NoMissingTypeAnnotation
+import NoPrematureLetComputation
 import NoRedundantConcat
 import NoRedundantCons
 import NoUnused.CustomTypeConstructors
@@ -35,7 +38,10 @@ config =
     [ NoBooleanCase.rule
     , NoDebug.Log.rule
     , NoDebug.TodoOrToString.rule
+    , NoDeprecated.rule NoDeprecated.defaults
+    , NoInvalidRGBValues.rule
     , NoMissingTypeAnnotation.rule
+    , NoPrematureLetComputation.rule
     , NoRedundantConcat.rule
     , NoRedundantCons.rule
     , NoUnused.CustomTypeConstructors.rule []
