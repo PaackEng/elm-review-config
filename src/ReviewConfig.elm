@@ -19,8 +19,8 @@ import NoMissingTypeAnnotation
 import NoPrematureLetComputation
 import NoRedundantConcat
 import NoRedundantCons
+import NoUnused.CustomTypeConstructorArgs
 import NoUnused.CustomTypeConstructors
-import NoUnused.CustomTypeConstructorsArgs
 import NoUnused.Dependencies
 import NoUnused.Exports
 import NoUnused.Modules
@@ -45,7 +45,7 @@ config =
     , NoRedundantConcat.rule
     , NoRedundantCons.rule
     , NoUnused.CustomTypeConstructors.rule []
-    , NoUnused.CustomTypeConstructorsArgs.rule []
+    , NoUnused.CustomTypeConstructorArgs.rule []
     , NoUnused.Dependencies.rule
     , NoUnused.Exports.rule
     , NoUnused.Parameters.rule
