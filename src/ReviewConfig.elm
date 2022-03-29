@@ -45,7 +45,7 @@ config =
     , NoRedundantConcat.rule
     , NoRedundantCons.rule
     , NoUnused.CustomTypeConstructors.rule []
-    , NoUnused.CustomTypeConstructorArgs.rule []
+    , NoUnused.CustomTypeConstructorArgs.rule
     , NoUnused.Dependencies.rule
     , NoUnused.Exports.rule
     , NoUnused.Parameters.rule
