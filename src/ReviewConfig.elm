@@ -24,26 +24,28 @@ import NoUnused.Parameters
 import NoUnused.Patterns
 import NoUnused.Variables
 import Review.Rule exposing (Rule, ignoreErrorsForDirectories)
+import Simplify
 
 
 {-| List of rules used with elm-review
 -}
 config : List Rule
 config =
-    [ NoDebug.Log.rule
+    [ NoBooleanCase.rule
+    , NoDebug.Log.rule
     , NoDebug.TodoOrToString.rule
-    , NoBooleanCase.rule
-    , NoRedundantCons.rule
     , NoMissingTypeAnnotation.rule
+    , NoRedundantConcat.rule
+    , NoRedundantCons.rule
+    , NoUnused.CustomTypeConstructors.rule []
     , NoUnused.Dependencies.rule
     , NoUnused.Parameters.rule
     , NoUnused.Patterns.rule
     , NoUnused.Variables.rule
-    , NoUnused.CustomTypeConstructors.rule []
+    , Simplify.rule Simplify.defaults
     , ignoreErrorsForDirectories
         [ frontendKitDirectory ]
         NoUnused.Modules.rule
-    , NoRedundantConcat.rule
     ]
 
 
