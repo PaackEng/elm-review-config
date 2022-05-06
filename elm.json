@@ -12,7 +12,7 @@
             "jfmengels/elm-review": "2.7.1",
             "jfmengels/elm-review-common": "1.2.0",
             "jfmengels/elm-review-debug": "1.0.6",
-            "jfmengels/elm-review-simplify": "2.0.10",
+            "jfmengels/elm-review-simplify": "2.0.15",
             "jfmengels/elm-review-unused": "1.1.21",
             "truqu/elm-review-nobooleancase": "1.0.0",
             "truqu/elm-review-noredundantconcat": "1.0.0",
