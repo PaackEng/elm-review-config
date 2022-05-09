@@ -15,6 +15,7 @@ import NoDebug.TodoOrToString
 import NoDeprecated
 import NoExposingEverything
 import NoInvalidRGBValues
+import NoLeftPizza
 import NoMissingTypeAnnotation
 import NoPrematureLetComputation
 import NoRedundantConcat
@@ -39,6 +40,7 @@ config =
     , NoDebug.TodoOrToString.rule
     , NoDeprecated.rule NoDeprecated.defaults
     , NoInvalidRGBValues.rule
+    , NoLeftPizza.rule NoLeftPizza.Redundant
     , NoMissingTypeAnnotation.rule
     , NoPrematureLetComputation.rule
     , NoRedundantConcat.rule
